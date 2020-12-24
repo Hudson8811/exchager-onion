@@ -1,0 +1,15 @@
+header.header
+    .header__wrapper.container.container--big
+        .header__left
+            a.header__logo(href="")
+                img.header__logo-img(src="img/logo.svg" alt="")
+                .header__logo-text DonGoya’s
+            .header__info Exchange & Mixer
+        .header__right
+            form.header__search.search.header__search--error(method="post" action="")
+                .search__input.input-block.input-block--mini.input-block--error
+                    input(type="text" placeholder="Secret Transaction Code" name="code" value="SxT1567OlV")
+                    .input-block__error Your Secret Transaction Code is invalid
+                button.search__btn.btn.btn--mini(type="submit")
+                    span Check
+                    img.btn__icon(src="img/i-check.svg")

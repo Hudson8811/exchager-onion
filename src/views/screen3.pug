@@ -1,0 +1,85 @@
+extends layouts/default
+
+block vars
+    -
+        const page = {
+            title: 'index.html'
+        };
+
+
+
+
+block main
+    .container
+
+        .table
+            .table__row
+                .table__cell.table__cell--title Secret Transaction Code:
+                .table__cell.table__cell--content 542XtFrtG22
+            .table__row
+                .table__cell.table__cell--title Type of exchange:
+                .table__cell.table__cell--content Floating
+            .table__row
+                .table__cell.table__cell--title Exchange direction:
+                .table__cell.table__cell--content BTC to XMR
+            .table__row
+                .table__cell.table__cell--title Your receiving XMR address:
+                .table__cell.table__cell--content 888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H.
+
+
+        .notification.notification--form
+            form.content-form(method="post" action="")
+                .content-form__row
+                    .content-form__left.content-form__left--doble
+                        .input-block.content-form__input-block
+                            .input-block__label.input-block__label--small Amount:
+                            .input-block__row
+                                input(type="number" name="result" value="0.01")
+                                .input-block__row-info
+                                    .on-desktop Bitcoin <span>(BTC)</span>
+                                    .on-mobile BTC
+                        .content-form__sep ≈
+                        .input-block.content-form__input-block
+                            .input-block__label.input-block__label--small Result:
+                            .input-block__row
+                                input(type="number" name="result" value="0.25")
+                                .input-block__row-info
+                                    .on-desktop Monero <span>(XMR)</span>
+                                    .on-mobile XMR
+
+                    .content-form__right
+                        button.content-form__btn.btn(type="submit" name="send")
+                            span calc
+                            img.btn__icon(src="img/i-plus.svg")
+
+            .notification__row
+                .notification__left
+                    .notification__code-block.code-block
+                        .code-block__title.code-block__title--big Send min 0.01 BTC and max 0.1 BTC to:
+                        .code-block__text 888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H.
+
+                .notification__right.on-desktop
+                    img(src="img/qr.svg" alt="qr")
+
+            .notification__row
+                .notification__left.notification__left--align-center
+                    .notification__icon
+                        img(src="img/w-time.svg" alt="")
+                    .notification__info
+                        .notification__status.notification__status--title <span class="red bold">The address will expire in 15 mins</span>
+        .notification
+            .notification__row
+                .notification__left
+                    .notification__icon
+                        img(src="img/a-time-y.svg" alt="")
+                    .notification__info
+                        .notification__status <span class="title">Status:</span> Waiting for paiment
+
+                .notification__right
+                    button.notification__btn.btn(type="button" name="send")
+                        span Refresh
+                        img.btn__icon(src="img/i-reset.svg")
+
+
+
+

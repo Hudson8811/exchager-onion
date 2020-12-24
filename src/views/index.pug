@@ -1,0 +1,37 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	.container
+		.tabs
+			a.tabs__link.tabs__link--active(href="") Floating rate
+			a.tabs__link(href="") Fixed rate
+		.tabs-content
+			form.content-form(method="post" action="")
+				.content-form__row
+					.content-form__left.content-form__left--doble
+						.input-block.content-form__input-block
+							.input-block__label You send:
+							select(name="send_type")
+								option(value="BTC" selected) Bitcoin (BTC)
+								option(value="XMR") Monero (XMR)
+						button.content-form__sep.content-form__sep--btn(type="submit" name="replace")
+							img(src="img/arrow.svg" alt="replace")
+						.input-block.content-form__input-block
+							.input-block__label You get:
+							select(name="send_type2")
+								option(value="BTC") Bitcoin (BTC)
+								option(value="XMR" selected) Monero (XMR)
+
+					.content-form__right
+						button.content-form__btn.btn(type="submit" name="send")
+							span select
+							img.btn__icon(src="img/i-select.svg")

@@ -1,0 +1,97 @@
+extends layouts/default
+
+block vars
+    -
+        const page = {
+            title: 'index.html'
+        };
+
+
+
+
+block main
+    .container
+
+        .notification
+            .notification__row
+                .notification__left
+                    .notification__icon
+                        img(src="img/a-time-y.svg" alt="")
+                    .notification__info
+                        .notification__status <span class="title">Status:</span> Waiting for paiment
+
+                .notification__right
+                    button.notification__btn.btn(type="button" name="send")
+                        span Refresh
+                        img.btn__icon(src="img/i-reset.svg")
+
+        .notification
+            .notification__row
+                .notification__left
+                    .notification__icon
+                        img(src="img/a-time-g.svg" alt="")
+                    .notification__info
+                        .notification__status <span class="title">Status:</span> <span class="value">0.1 BTC</span> received <u>(txid)</u>, confirming
+
+                .notification__right
+                    button.notification__btn.btn(type="button" name="send")
+                        span Refresh
+                        img.btn__icon(src="img/i-reset.svg")
+
+        .notification
+            .notification__row
+                .notification__left
+                    .notification__icon
+                        img(src="img/a-time-g.svg" alt="")
+                    .notification__info
+                        .notification__status <span class="title">Status:</span> <span class="value">0.1 BTC</span> received <u>(txid)</u>, confirmed. <span class="value">130 XMR</span> sent <u>(txid)</u>
+
+                .notification__right
+                    button.notification__btn.btn(type="button" name="send")
+                        span Refresh
+                        img.btn__icon(src="img/i-reset.svg")
+
+        .notification.notification--pad
+            .notification__row
+                .notification__left
+                    .notification__icon
+                        img(src="img/a-alert-r.svg" alt="")
+                    .notification__info
+                        .notification__status
+                            p <span class="title">Status:</span> <span class="value">0.001 BTC received;</span>
+                            p <span class="red">Amount is too small (min amount is 0.01 BTC); </span>
+                            p <span class="red bold">You have 24h to provide a BTC address for a refund.</span>
+
+
+
+            form.notification__row(method="post" action="")
+                .notification__left
+                    .notification__icon.notification__icon--no
+                    .input-block.notification__input-block
+                        input(type="text" name="xmr" value="" placeholder="Your Bitcoin (BTC) address")
+
+
+                .notification__right
+                    button.notification__btn.btn.btn--red(type="submit" name="send")
+                        span refund
+                        img.btn__icon(src="img/i-return.svg")
+
+        .notification.notification--pad
+            .notification__row.notification__row--align-top
+                .notification__left
+                    .notification__icon
+                        img(src="img/a-check-o.svg" alt="")
+                    .notification__info
+                        .notification__status
+                            p <span class="title">Status:</span> <span class="value">0.001 BTC</span> <span class="red">(minus network fees)</span> have been refunded.
+                            p Next time please read the terms of exchange carefully
+                        .notification__code-block.code-block.notification__code-block--full
+                            .code-block__title Refunded addres:
+                            .code-block__text 888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H.
+
+                .notification__right
+                    button.notification__btn.btn(type="button" name="send")
+                        span Refresh
+                        img.btn__icon(src="img/i-reset.svg")
+
+

@@ -1,0 +1,258 @@
+.input-block{
+  position: relative;
+  textarea,
+  input{
+    width: 100%;
+    font-weight: 600;
+    padding-left: 20px;
+    height: 48px;
+    resize: none;
+    min-width: 0;
+    @include mMax{
+      height: 40px;
+      padding-left: 16px;
+      font-size: 13px;
+    }
+    &::placeholder{
+      font-weight: 400;
+      color: #70719C;
+    }
+  }
+  select{
+    width: 100%;
+    height: 48px;
+    padding-left: 20px;
+    padding-right: 40px;
+    background: #FFFFFF url("../img/select.svg") center right 13px no-repeat;
+    @include mMax{
+      padding-left: 16px;
+      padding-right: 35px;
+      height: 40px;
+    }
+  }
+  textarea{
+    padding-top: 10px;
+    @include mMax{
+      height: 88px;
+    }
+  }
+  &--mini{
+    textarea,
+    input{
+      font-size: 14px;
+      height: 40px;
+      @include mMax{
+        font-size: 13px;
+      }
+      &::placeholder{
+        font-size: 14px;
+        @include mMax{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  &__label{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #8C56FF;
+    margin-bottom: 4px;
+    @include mMax{
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &--small{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #70719C;
+      margin-bottom: 12px;
+      text-transform: none;
+      @include mMax{
+        font-size: 13px;
+        line-height: 19px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__row{
+    display: flex;
+    input{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &-info{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      color: #252644;
+      text-align: center;
+      background: #E1E2F0;
+      border-radius: 0 5px 5px 0;
+      white-space: nowrap;
+      padding: 0 20px;
+      box-sizing: border-box;
+      @include mMax{
+        font-size: 13px;
+        border-radius: 0 3px 3px 0;
+        padding: 0 5px;
+        min-width: 39px;
+      }
+      span{
+        color: #AAABC9;
+      }
+      .on-desktop{
+        @include mMax{
+          display: none;
+        }
+      }
+      .on-mobile{
+        display: none;
+        @include mMax{
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__error{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FF364E;
+    margin-top: 4px;
+    @include mMax{
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+
+  &--error{
+    input, textarea, select{
+      border-color: #FF364E;
+      color: #FF364E;
+      font-weight: 400;
+    }
+  }
+}
+
+.btn{
+  background: #4F56FE;
+  border-radius: 60px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 32px;
+  padding-right: 40px;
+  border: none;
+  width: 166px;
+  max-width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  position: relative;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+  @include mMax{
+    height: 40px;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+  }
+  &:hover{
+    background: #3d43c6;
+  }
+  img{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 25px;
+    max-height: 25px;
+    @include mMax{
+      display: none;
+    }
+  }
+  &--mini{
+    padding-right: 35px;
+    height: 40px;
+    @include mMax{
+      padding-right: 20px;
+    }
+    img{
+      right: 8px;
+    }
+  }
+  &--purple{
+    background: #8C56FF;
+    &:hover{
+      background: #6d43c6;
+    }
+  }
+  &--red{
+    background: #FF364E;
+    &:hover{
+      background: #d42d41;
+    }
+  }
+}
+
+.code-block{
+  &__title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #70719C;
+    margin-bottom: 7px;
+    @include mMax{
+      font-size: 13px;
+      line-height: 19px;
+      margin-bottom: 6px;
+    }
+    &--big{
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 33px;
+      color: #8C56FF;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      @include mMax{
+        font-size: 18px;
+        line-height: 135%;
+        max-width: 90%;
+      }
+    }
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #70719C;
+    padding: 15px 20px;
+    background: #F3F4FC;
+    border: 1px solid #DCDDEC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    word-break: break-all;
+    @include mMax{
+      font-size: 13px;
+      line-height: 19px;
+      padding: 10px 16px;
+      border-radius: 3px;
+      min-height: 116px;
+    }
+  }
+}

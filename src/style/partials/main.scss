@@ -1,0 +1,130 @@
+html {
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-o-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	font-size: 16px;
+	color: $mainColor;
+	background: #ffffff;
+	font-family: $mainFont;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	-webkit-locale: auto;
+	white-space: normal;
+}
+
+html,
+body {
+	max-width: 100%;
+	min-height: 100vh;
+	background: url("../images/bg.jpg") center center no-repeat;
+	background-size: cover;
+}
+input, button {
+    -webkit-appearance: none;
+}
+
+a {
+	text-decoration: none;
+	color: $mainColor;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: $mainFont;
+	background-color: #FFFFFF;
+	color: $mainColor;
+	outline: 0;
+	border: 1px solid #DCDDEC;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-size: 16px;
+	@include mMax{
+		font-size: 13px;
+		border-radius: 3px;
+	}
+	&::placeholder{
+		font-family: $mainFont;
+		font-size: 16px;
+		@include mMax{
+			font-size: 13px;
+		}
+	}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+ol,
+ul,
+nav {
+	list-style: none;
+}
+
+img {
+	display: block;
+}
+
+*:focus {
+	outline: none;
+}
+
+.main {
+	flex-grow: 1;
+	box-sizing: border-box;
+	padding: 90px 0;
+	@include tMax{
+		padding: 40px 0 56px;
+	}
+	@include mMax{
+		padding: 20px 0 56px;
+	}
+}
+
+.container {
+	box-sizing: border-box;
+	width: 1030px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 25px;
+	&--big{
+		width: 1160px;
+	}
+	@include mMax{
+		padding: 0 15px;
+	}
+}
+
+.red{
+	color: #FF364E;
+}
+.bold{
+	font-weight: 600;
+}

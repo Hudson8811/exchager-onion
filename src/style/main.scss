@@ -1,0 +1,13 @@
+@import "libs/reset.css";
+@import "libs/fonts.css";
+
+
+/* blocks */
+
+@import "partials/_var";
+@import "partials/mixins";
+@import "partials/main";
+@import "partials/components";
+@import "partials/_header";
+@import "partials/footer";
+@import "partials/content";

@@ -1,0 +1,36 @@
+.footer {
+  padding: 26px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  @include mMax{
+    padding: 16px 0;
+  }
+  &__wrapper{}
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #AAABC9;
+    @include mMax{
+      width: 50%;
+      flex-direction: row-reverse;
+      padding: 8px 0;
+      justify-content: flex-end;
+    }
+    img{
+      width: 45px;
+      margin-left: 16px;
+      @include mMax{
+        margin-left: 0;
+        margin-right: 8px;
+      }
+    }
+  }
+}

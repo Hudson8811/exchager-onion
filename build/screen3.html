@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/main.css" rel="stylesheet">
+    <!--title= `${page.title}`-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper container container--big">
+        <div class="header__left"><a class="header__logo" href=""><img class="header__logo-img" src="img/logo.svg" alt="">
+            <div class="header__logo-text">DonGoya’s</div></a>
+          <div class="header__info">Exchange & Mixer</div>
+        </div>
+        <div class="header__right">
+          <form class="header__search search" method="post" action="">
+            <div class="search__input input-block input-block--mini">
+              <input type="text" placeholder="Secret Transaction Code" name="code">
+            </div>
+            <button class="search__btn btn btn--mini" type="submit"><span>Check</span><img class="btn__icon" src="img/i-check.svg"></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="table">
+          <div class="table__row">
+            <div class="table__cell table__cell--title">Secret Transaction Code:</div>
+            <div class="table__cell table__cell--content">542XtFrtG22</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--title">Type of exchange:</div>
+            <div class="table__cell table__cell--content">Floating</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--title">Exchange direction:</div>
+            <div class="table__cell table__cell--content">BTC to XMR</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--title">Your receiving XMR address:</div>
+            <div class="table__cell table__cell--content">888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H.</div>
+          </div>
+        </div>
+        <div class="notification notification--form">
+          <form class="content-form" method="post" action="">
+            <div class="content-form__row">
+              <div class="content-form__left content-form__left--doble">
+                <div class="input-block content-form__input-block">
+                  <div class="input-block__label input-block__label--small">Amount:</div>
+                  <div class="input-block__row">
+                    <input type="number" name="result" value="0.01">
+                    <div class="input-block__row-info">
+                      <div class="on-desktop">Bitcoin <span>(BTC)</span></div>
+                      <div class="on-mobile">BTC</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-form__sep">≈</div>
+                <div class="input-block content-form__input-block">
+                  <div class="input-block__label input-block__label--small">Result:</div>
+                  <div class="input-block__row">
+                    <input type="number" name="result" value="0.25">
+                    <div class="input-block__row-info">
+                      <div class="on-desktop">Monero <span>(XMR)</span></div>
+                      <div class="on-mobile">XMR</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-form__right">
+                <button class="content-form__btn btn" type="submit" name="send"><span>calc</span><img class="btn__icon" src="img/i-plus.svg"></button>
+              </div>
+            </div>
+          </form>
+          <div class="notification__row">
+            <div class="notification__left">
+              <div class="notification__code-block code-block">
+                <div class="code-block__title code-block__title--big">Send min 0.01 BTC and max 0.1 BTC to:</div>
+                <div class="code-block__text">888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H.</div>
+              </div>
+            </div>
+            <div class="notification__right on-desktop"><img src="img/qr.svg" alt="qr"></div>
+          </div>
+          <div class="notification__row">
+            <div class="notification__left notification__left--align-center">
+              <div class="notification__icon"><img src="img/w-time.svg" alt=""></div>
+              <div class="notification__info">
+                <div class="notification__status notification__status--title"><span class="red bold">The address will expire in 15 mins</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="notification">
+          <div class="notification__row">
+            <div class="notification__left">
+              <div class="notification__icon"><img src="img/a-time-y.svg" alt=""></div>
+              <div class="notification__info">
+                <div class="notification__status"><span class="title">Status:</span> Waiting for paiment</div>
+              </div>
+            </div>
+            <div class="notification__right">
+              <button class="notification__btn btn" type="button" name="send"><span>Refresh</span><img class="btn__icon" src="img/i-reset.svg"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper container container--big">
+        <div class="footer__flex">
+          <div class="footer__item"><span>TOR Only</span><img src="img/f-1.svg" alt=""></div>
+          <div class="footer__item"><span>No JS</span><img src="img/f-2.svg" alt=""></div>
+          <div class="footer__item"><span>No Logs</span><img src="img/f-3.svg" alt=""></div>
+          <div class="footer__item"><span>Anti-AML</span><img src="img/f-4.svg" alt=""></div>
+          <div class="footer__item"><span>Dont’t KYC</span><img src="img/f-5.svg" alt=""></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+.header {
+  padding: 19px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  @include mMax{
+    padding: 24px 0 20px;
+    border: none;
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tMax{
+      flex-direction: column;
+    }
+  }
+  &__left{
+    display: flex;
+    align-items: center;
+    @include mMax{
+      flex-direction: column;
+    }
+  }
+  &__right{
+    @include tMax{
+      padding-top: 0;
+      margin-top: 20px;
+    }
+    @include mMax{
+      width: 100%;
+    }
+  }
+
+  &__logo{
+    display: flex;
+    align-items: center;
+    font-family: $lofoFont;
+    font-size: 28px;
+    line-height: 150%;
+    color: #FFFFFF;
+    @include mMax{
+      flex-direction: column;
+      font-size: 24px;
+    }
+    &-img{
+      @include mMax{
+        height: 37px;
+      }
+    }
+    &-text{
+      margin-left: 22px;
+      @include mMax{
+        margin-left: 0;
+        margin-top: 8px;
+        text-align: center;
+      }
+    }
+  }
+  &__info{
+    letter-spacing: 0.05em;
+    color: #AAABC9;
+    font-size: 15px;
+    line-height: 36px;
+    margin-left: 14px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(170, 171, 201, 0.27);
+    white-space: nowrap;
+    @include mMax{
+      border-left: none;
+      padding-left: 0;
+      margin-left: 0;
+      font-size: 13px;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+  &__search{
+    input{
+      &::placeholder{
+        color: $mainColor;
+      }
+    }
+    &--error{
+      margin-bottom: -22px;
+      @include mMax{
+        margin-bottom: 0;
+      }
+      input{
+        border-width: 2px;
+      }
+    }
+  }
+}
+
+.search{
+  display: flex;
+  @include mMax{
+    display: block;
+  }
+  &__input{
+    width: 397px;
+    max-width: 100%;
+    margin-right: 32px;
+    @include dMax{
+      width: 220px;
+    }
+    @include mMax{
+      width: 100%;
+    }
+  }
+  &__btn{
+    @include mMax{
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+}

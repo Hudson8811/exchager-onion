@@ -1,0 +1,84 @@
+extends layouts/ui
+
+block vars
+    -
+        const page = {
+            title: 'index.html'
+        };
+
+
+
+
+block main
+    .container
+        .tabs
+            a.tabs__link.tabs__link--active(href="") Floating rate
+            a.tabs__link(href="") Fixed rate
+        .tabs-content
+            form.content-form(method="post" action="")
+                .content-form__row
+                    .content-form__left.content-form__left--doble
+                        .input-block.content-form__input-block
+                            .input-block__label You send:
+                            select(name="send_type")
+                                option(value="BTC" selected) Bitcoin (BTC)
+                                option(value="XMR") Monero (XMR)
+                        button.content-form__sep.content-form__sep--btn(type="submit" name="replace")
+                            img(src="img/arrow.svg" alt="replace")
+                        .input-block.content-form__input-block
+                            .input-block__label You get:
+                            select(name="send_type2")
+                                option(value="BTC") Bitcoin (BTC)
+                                option(value="XMR" selected) Monero (XMR)
+
+                    .content-form__right
+                        button.content-form__btn.btn(type="submit" name="send")
+                            span select
+                            img.btn__icon(src="img/i-select.svg")
+
+            form.content-form(method="post" action="")
+                .content-form__row
+                    .content-form__left.content-form__left--doble
+                        .input-block.content-form__input-block
+                            .input-block__label.input-block__label--small Amount:
+                            .input-block__row
+                                input(type="number" name="result" value="0.01")
+                                .input-block__row-info
+                                    .on-desktop Bitcoin <span>(BTC)</span>
+                                    .on-mobile BTC
+                        .content-form__sep ≈
+                        .input-block.content-form__input-block
+                            .input-block__label.input-block__label--small Result:
+                            .input-block__row
+                                input(type="number" name="result" value="0.25")
+                                .input-block__row-info
+                                    span.on-desktop Monero <span>(XMR)</span>
+                                    span.on-mobile XMR
+
+                    .content-form__right
+                        button.content-form__btn.btn(type="submit" name="send")
+                            span calc
+                            img.btn__icon(src="img/i-plus.svg")
+
+                    .content-form__left.content-form__warning
+                        img(src="img/w-info.svg" alt="info")
+                        span min 0.01 BTC; &nbsp; max 0.1 BTC
+
+
+
+            form.content-form(method="post" action="")
+                .content-form__row.content-form__row--error
+                    .content-form__left.content-form__left
+                        .input-block.content-form__input-block.input-block--error
+                            .input-block__label Your XMR address:
+                            textarea(name="xmr")
+                            .input-block__error Your Secret Transaction Code is invalid
+
+                    .content-form__right
+                        button.content-form__btn.btn.btn--purple(type="submit" name="send")
+                            span exchange
+                            img.btn__icon(src="img/i-reset.svg")
+
+                    .content-form__left.content-form__warning
+                        img(src="img/w-time.svg" alt="time")
+                        span You will have 15 minutes to send the funds
