@@ -42,6 +42,7 @@
       font-size: 24px;
     }
     &-img{
+      height: 46px;
       @include mMax{
         height: 37px;
       }

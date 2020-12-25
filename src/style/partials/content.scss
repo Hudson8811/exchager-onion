@@ -181,6 +181,10 @@
     &--btn{
       cursor: pointer;
     }
+    img{
+      max-width: 90%;
+      width: 15px;
+    }
   }
 
   &__warning{
@@ -403,4 +407,9 @@
   +*{
     margin-top: 40px;
   }
+}
+
+.qr-code{
+  width: 70px;
+  max-width: 100%;
 }
