@@ -106,6 +106,10 @@ img {
 	@include mMax{
 		padding: 20px 0 56px;
 	}
+	&--center{
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .container {

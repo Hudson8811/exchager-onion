@@ -140,6 +140,9 @@
       color: #FF364E;
       font-weight: 400;
     }
+    .input-block__label{
+      color: #FF364E;
+    }
   }
 }
 
@@ -228,7 +231,7 @@
       line-height: 33px;
       color: #8C56FF;
       margin-bottom: 5px;
-      text-transform: uppercase;
+      /*text-transform: uppercase;*/
       @include mMax{
         font-size: 18px;
         line-height: 135%;
@@ -255,5 +258,26 @@
       border-radius: 3px;
       min-height: 116px;
     }
+  }
+}
+
+.maintenance-block{
+  color: #fff;
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 500;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  text-align: center;
+  img{
+    margin: 0 auto 60px;
+    max-width: 100%;
+  }
+
+  @include mMax{
+    padding-top: 20px;
+    padding-bottom: 0;
+    font-size: 20px;
+    line-height: 25px;
   }
 }
