@@ -15,7 +15,7 @@ block main
         .table
             .table__row
                 .table__cell.table__cell--title Secret Transaction Code:
-                .table__cell.table__cell--content 542XtFrtG22
+                .table__cell.table__cell--content 542XtFrtG22 (expires in 24h)
             .table__row
                 .table__cell.table__cell--title Type of exchange:
                 .table__cell.table__cell--content Floating
@@ -32,17 +32,17 @@ block main
                 .content-form__row
                     .content-form__left.content-form__left--doble
                         .input-block.content-form__input-block
-                            .input-block__label.input-block__label--small Amount:
+                            .input-block__label.input-block__label--small Send:
                             .input-block__row
-                                input(type="number" name="result" value="0.01")
+                                input(type="text" name="result" value="0.01")
                                 .input-block__row-info
                                     .on-desktop Bitcoin <span>(BTC)</span>
                                     .on-mobile BTC
                         .content-form__sep ≈
                         .input-block.content-form__input-block
-                            .input-block__label.input-block__label--small Result:
+                            .input-block__label.input-block__label--small Receive <strong>exactly</strong>:
                             .input-block__row
-                                input(type="number" name="result" value="0.25")
+                                input(type="text" name="result" value="0.25")
                                 .input-block__row-info
                                     .on-desktop Monero <span>(XMR)</span>
                                     .on-mobile XMR
@@ -50,7 +50,7 @@ block main
                     .content-form__right
                         button.content-form__btn.btn(type="submit" name="send")
                             span calc
-                            img.btn__icon(src="img/i-plus.png")
+                            .btn__icon.img-base.img-base--i_plus
 
             .notification__row
                 .notification__left
@@ -59,26 +59,24 @@ block main
                         .code-block__text 888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H.
 
                 .notification__right.on-desktop
-                    img.qr-code(src="img/qr.png" alt="qr")
+                    .qr-code.img-base(style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARkAAAEZCAMAAACUzqElAAAAbFBMVEUAAAAkJkQlJkUkJkQgIkElJ0UkKEQkJUMkJEUoKEglJkMlJUQgIEAlJkUkJUQkJUQlJUUkJkQjJUMjJ0QkJUQjJUUlJkQAAAAgITwbHDMSEyIEBAgJCREWFyoNDhkeHzcUFSYZGi8QEB4dHjfCzkppAAAAFnRSTlMAf9+/H19Anz8g3+8Qb8+PMK9QT75POMT/6AAADBRJREFUeNrsnemW2jAMhScbMAUGpoubUCAs7/+OTWoOspCNiAnL0Ht/6bgeuOfrIZIcx3mDwkr71vTctw343MyOvqdB5W+XaZb2q+YjTd9KzpIxTN8OZExQl5IZmn4FMiATSeaPVdmESxHWTbgW4bYJdzbcNOGGQpVMZecuOZnyYML104kM9yPCXRNubbgmE064JBPLI5nfVmVrSoRVC0mEqxaSDRdNuKBQJ2Pn/jkhczDh+OlGhvsRYctgZcMlmVhyP+UhBBmQARmQAZmHkymtwqHpECZnW4KTD5aj3gl6ozDs4LJUw3tVegPTi/LXq4FB5gXJONX4KO+smVG6g4FRq3HeHeRWqWHdSt6hO5jlnTUyojtQcoGqxCi5aWDUXMBz05tVatxcqZNZCxNd9O74ARmQARmQAZmHk6msnKJhmF2gX0SmtJ9Q+snQhFoJrYnMym9txk3MiUwtTBTZBZoRGfIjK72c/rtUFUTmjpVexkdHRMY1QdZUZXIxGmRAJprM0qrkZNZ2tG7CnQi3nMzKjq68ZCajo6bNhL2du27C8UjoxE9B//JGZMiPS2bjmBDWFk1Y2XBHJnacTHm0JnMTkdFXrohM/MqVkJorM+5nJHMTI6OvXGUyN4EMyIAMyIDMw8nIEjzlo7U3LM51B4PMpw9Wgksy0o8kw02M/N2BtBbsS7I7dweFUSXJ+PyQXqQGBpnXJnOL7qAIVuMfo6Pmkozwc9SrdAeFkgusnj03gQzIgAzIgMyjyKysDCeztaOtv0qGnMzeju45mdKObp2QnEyGTLN2TPr5pBkTIkMmXDKVY0JYqzQ/787oQyo9cuIv+p5rHRhkQKYrmbXVCZmdHS2bcCHCipPZ2tEtmXovjpq1v3Y7YcOdlHZ055ApSGMy4VgbFEw5kVk5JoS1VRNWZELxc6eVq4GaC0Rz2eG+9pfL2iADMiADMiBzCZmF1UnW3tjR1tRKhDUnU9nRikzNk6Na16WdsGoZ2NEZjba5c5wIjcmEuYTM1jEhrG3bVE0myA+RIT+PXwfuYw/5C9XAIPMKZOR1ZppcoLm8znAye+fiIi45Gxm2Yn6uvc4MkgtUyOtMf7te9ZWrjNKUuuuV/Dx81yvIgAzIgAzI3J2MzNqzpLMyPWsTmeuzdpEw5d6snSWdNRNZ+3rplR6R6X8P+Zd79hZkXpuM73etr0LQ7zr6OjN2fuKOibOrEJnrh8gE/KirEN7rXr8nZui5ST8xQ38mTt7X/nJniYAMyIAMyICMTobd8d+JsG5zpwgrw+6wbyl0yFR2dOGSYbf5x8U/TWl07ZLhfqZ28gfzQ2S4HxGuuJ9ShDsnfNpKj8j49D/XwCDz3GSGfeu72MFYEZl3mvdpxJbCVidktjQqQ4dMMexXb7eSzE3KSpGSm2SupNz01QQyIAMyIHMqkDmj+SCkydnbEXzuO5HZOo8Iis8sDD2dR2FL0Qysxk24plH/04sjacLrZ8JH553IpEo5JXTrXSLxlZ5eeYIMyNycjDznQCETOv3gBz/ywNgJNYUVheJANK+JDzth7LU25Cakn8IxcTkZNReMbn+e3jffM3FRK1f6ShrIgAzIgAzIfCkynmpcISPOEhHV+LTNs9Qo1KIlWJ+QWTomKPxhP+3DsO5gakd/tjjIxIkf2a1k5NKrJ6r0/pF5nnVpkAGZ68h8ZiGd7dkLPrfwVuNjahRkS9Bq6JCptJZAjpamW3dAZPzdytst1Pm+NunSZ/RGlKZ6vM9OuRJkQAZkQAZknoVMznUpg0nu09TQO0O5k9qOLsNk5DtMnRcWtWQK+x2ZufydqgX382E/4Tv3Ux5CpdLT0XR/jHMQeTpl2melpwtkQKYPMqVVRzKBtxyO06M+HTKllZ9MykVk4t4NSWRUl+zTok6okGRCu0yH+mnbishaj7tw9RMzQAZkQAZkQOaZyDjvDB3kR6lkNqIw3zXhZ36q70p3IFsUb3ewplDtDmbebqWm0CVzsNb/OrCuO1d6kefPgAzI9EFG1t0qmWl61NiYy9+MHiIjWhRpLZVSTOiNy3vqKva+ttTF59f1s3IVkys73dcGGZABGZABGZB5QjKmo0bPUOlJE8OI8o4kKz2QARmQ6YtM3C7T+PP0pK6/Aqu7XiPO0wMZkAEZkAEZkHlaMr4lTiJDw8F65vzeg5LIDFKmrOtqp1yrnBOZM3shpKQf9s3x79jSd9fffv+M/uytTsZ4BTIgE0UmD+rNytlAWUsycm/nhMj493ZW1+3trJkfIqPs7RQiP9reTil/bnqG/cARTwsKndsPDDIgAzIgAzIPJZMG5e8OxqmiKZHxbF84HRXS/8zXrejdwfeUS35wRHeg6SuezHNeIAMyEWRENb6kMBfF/4eJftKqojCzHzYyVI1T+Cfkh3UHP0QzMslDmkT4UVeuZJrqd/+t/pYi/T67rgg/IAMyIAMyIPNwMoFDEUlzIlPTBP8BJ6n9k5RGaxvKA1fkBDIRDonMLLtEmh8iQ6OWjC56pv5J1KcfIkMCGZCJIjPyKjW+U+PmI0VDczywbdGElXOmtJ0wbcI9HRU3tqM/DD9T+hCWrQkKC/qeCZHZ2QnbJtzIU+M0P63mh/5i5ErZAHvdrtfotxRdnyuv3/UKMiADMiADMg8kk0nJc9I/zh3HWHhL8JLC2iVDo5yM3h3koiUYG61b0fzMM6bP+z2Roe8SkUXW9evS8X5ABmSuIaNW4+4Zzn4ywWo8EyX4gHcH32RhfuKnEAV75vhRuoNIP9Hnfvd/lojwoyQk5SyRSD8gAzIgAzIg80xkVvK9qZxMZUfLIJm9nbCnsHWdDo+akhPnla5jmjDz+JFkpB8Z7gN+OBnFT/we8usrPf1U/xCZOAXIBAQyIBNBpghqcvhjPiqtzgufhub4dvgNkZnQBOcV9bsTMmurMJmFnVA2YVKc0aeht9WfkFH8vAk97B2m3yJyk354hpKbQn5ABmRABmRA5qFkkr41IDL7xT+twmTshM0JmYVVOGuv7ISSyHw/MUFkKjt3q5Hhfu74ji3pJL7S0/eQJ7II1cmQQAZkIsiI3/VGhGUTrkRYN+HWhlUTVoeQTM0TpuLG15kh95Ncf50Jr1zFn/utq//cNOR+kutyE8iADMiADMg8nEy/WVt+p0jgnbP2lP487SVrS2szc/PuQFtszZRK7/rzZ4hM5DowyIBMBBnxu54lnZUZus4EyZRiQWKSME0PkxOuCZGh614PqxDS2oaFSi6IeEtRiIx8Bi1+F+61K1f6iRkg87e9s9tNEAiicKIgqdRaNSHYtKXy/g/ZkDWencyuA8if5pyrCYHl5LvZ2WWZIRmSIRmSmZ2M/sJ+TFvoDa+/uBEu8Vnb3dCg22KEI767R+TN2rUbomomcIT7fl/8tbVahI/12EpBpnWmZ54ht/1McEqEZEimN5kfJ+EEhxmDYQky4gRjcBciu2ld4MSgJFPCRDc/Q55gRGjUrzN2rlJ7boJ6/hOXPNbDtOfcRDIkQzIkQzKzk0EZDzgRtURqFZ5BRvwtGCLzvrmpOXRb4e88nwxM+H5O7rm8jZ+ve38L/oFM3E95DZ8h0xtUmfbzvDkwyQQ1P5mzkyCDugLBsJRkSlwNkME7Kv91IBOpuxA18bFupy2sVSCj/eh6cOPOTSDTt1PnwJ1Ds/Z+SIZkSIZkSGYuMiOtDuIpeI3Qr92xgXw/MFFIP7tNSG/XHABXskKsDg6mn9uTI2Z6aQFNk+nBzwAiGZIRmnd1kGLgylwdhHP0PLgkyDv6KbUJUb45XIpthLnJrrZt71zhY7ZZwcP2Y9f30ztXJEMyJEMyJDM7mbs9Q5vX/6rwIpzYXYoqFX4LMqJLUeLkmRBkYn527rG95wdh7fmRZCrdw/TJMr1RqlO+RA5MMksiE2jEvmqhU8ue7EUwLD0yRtdFJ5CJNJEvrDDHYAc32OcqosFPvdpz07Lq6UVFMiRDMiRDMnOR0auDTdJZ+wdWBwmk/Sgyxuqghonw6uDgdzZVSnxNVX8Gmqc6pdZ6MZV5SObFyJROHcP7PdBPq5Dy2Gggg6sRMvIGDBxZB+gbYmQw8LQVM/RO0ZgVM8z6fkurJUIyJEMyJEMyJNOCzKCyyUCjVqfUZBaTA5PMi5L5B4dAHv8kRMQtAAAAAElFTkSuQmCC');")
 
             .notification__row
                 .notification__left.notification__left--align-center
-                    .notification__icon
-                        img(src="img/w-time.png" alt="")
+                    .notification__icon.img-base.img-base--w_time
                     .notification__info
                         .notification__status.notification__status--title <span class="red bold">The address will expire in 15 mins</span>
         .notification
             .notification__row
                 .notification__left
-                    .notification__icon
-                        img(src="img/a-time-y.png" alt="")
+                    .notification__icon.img-base.img-base--a_time-y
                     .notification__info
                         .notification__status <span class="title">Status:</span> Waiting for paiment
 
                 .notification__right
                     button.notification__btn.btn(type="button" name="send")
                         span Refresh
-                        img.btn__icon(src="img/i-reset.png")
+                        .btn__icon.img-base.img-base--i_reset
 
 
 

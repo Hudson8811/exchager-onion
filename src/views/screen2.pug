@@ -24,7 +24,7 @@ block main
                                 option(value="BTC" selected) Bitcoin (BTC)
                                 option(value="XMR") Monero (XMR)
                         button.content-form__sep.content-form__sep--btn(type="submit" name="replace")
-                            img(src="img/arrow.png" alt="replace")
+                            .img-base.img-base--arrows
                         .input-block.content-form__input-block
                             .input-block__label You get:
                             select(name="send_type2")
@@ -34,23 +34,23 @@ block main
                     .content-form__right
                         button.content-form__btn.btn(type="submit" name="send")
                             span select
-                            img.btn__icon(src="img/i-select.png")
+                            .btn__icon.img-base.img-base--i_select
 
             form.content-form(method="post" action="")
                 .content-form__row
                     .content-form__left.content-form__left--doble
                         .input-block.content-form__input-block
-                            .input-block__label.input-block__label--small Amount:
+                            .input-block__label.input-block__label--small Send:
                             .input-block__row
-                                input(type="number" name="result" value="0.01")
+                                input(type="text" name="result" value="0.01")
                                 .input-block__row-info
                                     .on-desktop Bitcoin <span>(BTC)</span>
                                     .on-mobile BTC
                         .content-form__sep ≈
                         .input-block.content-form__input-block
-                            .input-block__label.input-block__label--small Result:
+                            .input-block__label.input-block__label--small Receive <strong>roughly</strong>:
                             .input-block__row
-                                input(type="number" name="result" value="0.25")
+                                input(type="text" name="result" value="0.25")
                                 .input-block__row-info
                                     .on-desktop Monero <span>(XMR)</span>
                                     .on-mobile XMR
@@ -58,11 +58,11 @@ block main
                     .content-form__right
                         button.content-form__btn.btn(type="submit" name="send")
                             span calc
-                            img.btn__icon(src="img/i-plus.png")
+                            .btn__icon.img-base.img-base--i_plus
 
                     .content-form__left.content-form__warning
-                        img(src="img/w-info.png" alt="info")
-                        span min 0.01 BTC; &nbsp; max 0.1 BTC
+                        .img-base.img-base--w_info
+                        span.red min 0.01 BTC; &nbsp; max 0.1 BTC
 
 
 
@@ -76,8 +76,8 @@ block main
                     .content-form__right
                         button.content-form__btn.btn.btn--purple(type="submit" name="send")
                             span exchange
-                            img.btn__icon(src="img/i-reset.png")
+                            .img-base.img-base--i_reset
 
                     .content-form__left.content-form__warning
-                        img(src="img/w-time.png" alt="time")
+                        .img-base.img-base--w_time
                         span You will have 15 minutes to send the funds

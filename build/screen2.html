@@ -13,7 +13,8 @@
   <body>
     <header class="header">
       <div class="header__wrapper container container--big">
-        <div class="header__left"><a class="header__logo" href=""><img class="header__logo-img" src="img/logo.png" alt="">
+        <div class="header__left"><a class="header__logo" href="">
+            <div class="header__logo-img img-base img-base--logo"></div>
             <div class="header__logo-text">DonGoya’s</div></a>
           <div class="header__info">Exchange & Mixer</div>
         </div>
@@ -22,7 +23,9 @@
             <div class="search__input input-block input-block--mini">
               <input type="text" placeholder="Secret Transaction Code" name="code">
             </div>
-            <button class="search__btn btn btn--mini" type="submit"><span>Check</span><img class="btn__icon" src="img/i-check.png"></button>
+            <button class="search__btn btn btn--mini" type="submit"><span>Check</span>
+              <div class="btn__icon img-base img-base--i_check"></div>
+            </button>
           </form>
         </div>
       </div>
@@ -41,7 +44,9 @@
                     <option value="XMR">Monero (XMR)</option>
                   </select>
                 </div>
-                <button class="content-form__sep content-form__sep--btn" type="submit" name="replace"><img src="img/arrow.png" alt="replace"></button>
+                <button class="content-form__sep content-form__sep--btn" type="submit" name="replace">
+                  <div class="img-base img-base--arrows"></div>
+                </button>
                 <div class="input-block content-form__input-block">
                   <div class="input-block__label">You get:</div>
                   <select name="send_type2">
@@ -51,7 +56,9 @@
                 </div>
               </div>
               <div class="content-form__right">
-                <button class="content-form__btn btn" type="submit" name="send"><span>select</span><img class="btn__icon" src="img/i-select.png"></button>
+                <button class="content-form__btn btn" type="submit" name="send"><span>select</span>
+                  <div class="btn__icon img-base img-base--i_select"></div>
+                </button>
               </div>
             </div>
           </form>
@@ -59,9 +66,9 @@
             <div class="content-form__row">
               <div class="content-form__left content-form__left--doble">
                 <div class="input-block content-form__input-block">
-                  <div class="input-block__label input-block__label--small">Amount:</div>
+                  <div class="input-block__label input-block__label--small">Send:</div>
                   <div class="input-block__row">
-                    <input type="number" name="result" value="0.01">
+                    <input type="text" name="result" value="0.01">
                     <div class="input-block__row-info">
                       <div class="on-desktop">Bitcoin <span>(BTC)</span></div>
                       <div class="on-mobile">BTC</div>
@@ -70,9 +77,9 @@
                 </div>
                 <div class="content-form__sep">≈</div>
                 <div class="input-block content-form__input-block">
-                  <div class="input-block__label input-block__label--small">Result:</div>
+                  <div class="input-block__label input-block__label--small">Receive <strong>roughly</strong>:</div>
                   <div class="input-block__row">
-                    <input type="number" name="result" value="0.25">
+                    <input type="text" name="result" value="0.25">
                     <div class="input-block__row-info">
                       <div class="on-desktop">Monero <span>(XMR)</span></div>
                       <div class="on-mobile">XMR</div>
@@ -81,9 +88,13 @@
                 </div>
               </div>
               <div class="content-form__right">
-                <button class="content-form__btn btn" type="submit" name="send"><span>calc</span><img class="btn__icon" src="img/i-plus.png"></button>
+                <button class="content-form__btn btn" type="submit" name="send"><span>calc</span>
+                  <div class="btn__icon img-base img-base--i_plus"></div>
+                </button>
               </div>
-              <div class="content-form__left content-form__warning"><img src="img/w-info.png" alt="info"><span>min 0.01 BTC; &nbsp; max 0.1 BTC</span></div>
+              <div class="content-form__left content-form__warning">
+                <div class="img-base img-base--w_info"></div><span class="red">min 0.01 BTC; &nbsp; max 0.1 BTC</span>
+              </div>
             </div>
           </form>
           <form class="content-form" method="post" action="">
@@ -95,9 +106,13 @@
                 </div>
               </div>
               <div class="content-form__right">
-                <button class="content-form__btn btn btn--purple" type="submit" name="send"><span>exchange</span><img class="btn__icon" src="img/i-reset.png"></button>
+                <button class="content-form__btn btn btn--purple" type="submit" name="send"><span>exchange</span>
+                  <div class="img-base img-base--i_reset"></div>
+                </button>
               </div>
-              <div class="content-form__left content-form__warning"><img src="img/w-time.png" alt="time"><span>You will have 15 minutes to send the funds</span></div>
+              <div class="content-form__left content-form__warning">
+                <div class="img-base img-base--w_time"></div><span>You will have 15 minutes to send the funds</span>
+              </div>
             </div>
           </form>
         </div>
@@ -106,11 +121,21 @@
     <footer class="footer">
       <div class="footer__wrapper container container--big">
         <div class="footer__flex">
-          <div class="footer__item"><span>TOR Only</span><img src="img/f-1.png" alt=""></div>
-          <div class="footer__item"><span>No JS</span><img src="img/f-2.png" alt=""></div>
-          <div class="footer__item"><span>No Logs</span><img src="img/f-3.png" alt=""></div>
-          <div class="footer__item"><span>Anti-AML</span><img src="img/f-4.png" alt=""></div>
-          <div class="footer__item"><span>Dont’t KYC</span><img src="img/f-5.png" alt=""></div>
+          <div class="footer__item"><span>TOR Only</span>
+            <div class="img-base img-base--t1"></div>
+          </div>
+          <div class="footer__item"><span>No JS</span>
+            <div class="img-base img-base--t2"></div>
+          </div>
+          <div class="footer__item"><span>No Logs</span>
+            <div class="img-base img-base--t3"></div>
+          </div>
+          <div class="footer__item"><span>Anti-AML</span>
+            <div class="img-base img-base--t4"></div>
+          </div>
+          <div class="footer__item"><span>Don't KYC</span>
+            <div class="img-base img-base--t5"></div>
+          </div>
         </div>
       </div>
     </footer>

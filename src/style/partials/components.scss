@@ -23,7 +23,7 @@
     height: 48px;
     padding-left: 20px;
     padding-right: 40px;
-    background: #FFFFFF url("../img/select.png") center right 13px no-repeat;
+    background: #FFFFFF url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAcBAMAAABv4amZAAAAIVBMVEUAAAAgIEAlJUQlJUUgIEglJkUmJkQlJUQlJUUjJkMlJkSCgFomAAAACnRSTlMAEM9gIN+A7zBQAJPoeAAAAGZJREFUGNNjGHJABIktwMDAqOoA57JVMDAwrQqB87OWNzAwr1rqAJNetQiowQquIGuVIpAEK0BIgxUgpKEK4NJQBTBpuAKoNFwBRBqhwA0sjVBQBZZGKIBIIxRApBEKINIIMBFKAwApNCKPPx3+igAAAABJRU5ErkJggg==') center right 13px no-repeat;
     background-size: 15px auto;
     @include mMax{
       padding-left: 16px;
@@ -178,13 +178,13 @@
   &:hover{
     background: #3d43c6;
   }
-  img{
+  .img-base{
     position: absolute;
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 24px;
-    max-height: 24px;
+    width: 23px;
+    height: 24px;
     @include mMax{
       display: none;
     }
@@ -269,9 +269,15 @@
   padding-top: 90px;
   padding-bottom: 90px;
   text-align: center;
-  img{
+  .img-base{
     margin: 0 auto 60px;
     max-width: 100%;
+    width: 504px;
+    height: 196px;
+    @include mMax{
+      width: 320px;
+      height: 124px;
+    }
   }
 
   @include mMax{

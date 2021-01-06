@@ -43,8 +43,10 @@
     }
     &-img{
       height: 46px;
+      width: 70px;
       @include mMax{
         height: 37px;
+        width: 56px;
       }
     }
     &-text{
